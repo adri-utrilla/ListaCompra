@@ -1,4 +1,4 @@
-# Pruebas con JMeter - Sistemas Distribuidos
+# Pruebas con JMeter - Tecnologias y Sistemas Web
 
 Este repositorio contiene los archivos y configuraciones utilizados para realizar pruebas de rendimiento y carga con Apache JMeter en el proyecto de Tecnologias y Sistemas Web.
 
