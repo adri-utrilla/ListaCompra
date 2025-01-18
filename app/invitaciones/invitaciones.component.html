@@ -1,0 +1,18 @@
+<div class="container">
+  <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Email a invitar" [(ngModel)]="email" required name="email"/>
+      <button type="button" (click)="invitarUsuario()">Invitar Usuario</button>
+    
+      <div *ngIf="hayUrlGenerada">
+          <p>Invitación generada con éxito:</p>
+          <a [href]="UrlGenerada" target="_blank">{{ UrlGenerada }}</a>
+      </div>
+      <div *ngIf="errorInvitar">{{ errorInvitar }}</div>
+
+      <label for="emailEliminar">Eliminar usuario</label>
+      <input type="email" id="emailEliminar" placeholder="Email a eliminar" [(ngModel)]="emailEliminar" required name="emailEliminar"/>
+      <button type="button" (click)="eliminarUsuario()">Eliminar Usuario</button>
+      <div *ngIf="errorEliminar">{{ errorEliminar }}</div>
+  </form>
+</div>

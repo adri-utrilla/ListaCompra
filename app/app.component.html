@@ -1,0 +1,14 @@
+<div>
+  <nav>
+    <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+    <ul [class.show]="menuOpen">
+      <a href="Login">Inicio</a>
+      <a href="Login">Login</a>
+      <a href="Register">Registro</a>
+      <a href="GestorLista">Gestor de Listas</a>
+      <a href="hacersePremium">Hacerse premium</a>
+      <br>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

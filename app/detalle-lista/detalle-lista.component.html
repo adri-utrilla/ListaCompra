@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Añadir producto</h2>
+  <label for="nuevoProducto">Producto a añadir en la lista:</label>
+  <input [(ngModel)]="nuevoProducto" placeholder="Agregar producto" />
+  <label for="unidadesPedidas">Unidades a comprar (0-10):</label>
+  <input [(ngModel)]="unidadesPedidas" type="number" min="0" max="10" />
+  <button (click)="aniadirProducto()">+ Añadir producto a lista</button>
+  <div *ngIf="errorLista" class="alert alert-danger">{{ errorLista }}</div>
+</div>
+
+<div class="container">
+  <h3>Productos:</h3>
+  <ul>
+      <li *ngFor="let producto of misProductos; let i = index">
+          <td>
+              <strong>Nombre: </strong> 
+              <input type="text" [(ngModel)]="producto.nombre" /> - Unidades pedidas: 
+              <input type="number" [(ngModel)]="producto.unidadesPedidas" min="0" />, Compradas: 
+              <input type="number" [(ngModel)]="producto.unidadesCompradas" min="0" max="{{ producto.unidadesPedidas }}" />
+          </td>
+          <td>
+              <button (click)="comprarProducto(producto.id!, producto.unidadesCompradas)">Comprar</button>
+              <button (click)="editarProducto(producto.id!, producto.nombre, producto.unidadesPedidas)">Editar producto</button>
+              <button (click)="eliminarProducto(producto.id!)">Eliminar</button>
+          </td>
+      </li>
+  </ul>
+</div>

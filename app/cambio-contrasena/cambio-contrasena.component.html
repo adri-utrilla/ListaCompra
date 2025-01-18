@@ -1,0 +1,11 @@
+<div class="container">
+    <label for="pwd">Nueva Contraseña:</label>
+    <input type="password" id="pwd" name="pwd" [(ngModel)]="pwd1" required placeholder="Nueva Contraseña">
+    <label for="pwd2">Confirmar Contraseña:</label>
+    <input type="password" id="pwd2" name="pwd2" [(ngModel)]="pwd2" required placeholder="Confirmar Contraseña">
+    <span *ngIf="respuestaOK">Se ha cambiado la contraseña.</span>
+    <span *ngIf="mensajeError">No se ha podido cambiar la contraseña.</span>
+</div>
+<div class="container">
+    <button (click)="cambiarContrasena()">Enviar</button>
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+  <h2>Hacerse Premium</h2>
+
+
+  <div class="form-group">
+    <label for="importe">Importe (€):</label>
+    <input
+      type="number"
+      id="importe"
+      [(ngModel)]="importe"
+      placeholder="3 €"
+      min="3"
+      max="3"
+      step="1"
+      value="3"
+      required
+    />
+  </div> 
+
+
+  <div class="form-group">
+    <label for="nombre">Nombre del Cliente:</label>
+    <input
+      type="text"
+      id="nombre"
+      [(ngModel)]="nombre"
+      placeholder="Introduce tu nombre"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="card-element">Datos de la tarjeta:</label>
+    <div id="card-element"></div>
+  </div>
+
+  <div class="form-group">
+    <button
+      (click)="prepararTransaccion()"
+      [disabled]="importe <= 0 || !nombre"
+    >
+      Preparar Transacción
+    </button>
+    <button
+      (click)="confirmarPago()"
+      [disabled]="!clientSecret || !nombre || yaPremium"
+    >
+      Confirmar Pago
+    </button>
+  </div>
+  
+  <div class="info" *ngIf="mensaje">
+    <p [class.success]="isSuccess" [class.error]="!isSuccess">{{ mensaje }}</p>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+  
+
+  @media (min-width: 1025px) {
+    .container {
+      padding: 20px;
+      font-size: 18px;
+    }
+  }

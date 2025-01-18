@@ -1,0 +1,33 @@
+<div>
+    <h2>Gestión de listas</h2>
+    <input [(ngModel)]="nuevaLista" placeholder="Nuevo elemento">
+    <button (click)="agregarLista()">Agregar</button>
+    <div *ngIf="errorLista">{{ errorLista }}</div>
+    <p>Listas creadas</p>
+    <div *ngIf="errorEliminar">{{ errorEliminar }}</div>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>ID</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of misListas; let i = index">
+                    <td data-label="Nombre">{{ item.nombre }}</td>
+                    <td data-label="ID">{{ item.id }}</td>
+                    <td data-label="Acciones">
+                        <div class="button-container">
+                            <button (click)="agregarProducto(i)" style="margin-right: 10px;">Agregar producto</button>
+                            <button (click)="eliminarLista(i)">Eliminar</button>
+                            <button (click)="verLista(i)">Ver productos</button>
+                            <button (click)="usuariosLista(i)">Gestionar usuarios</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
