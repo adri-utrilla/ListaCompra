@@ -1,4 +1,3 @@
-# TySW_AJV_2024-2025
 # Pruebas con JMeter - Sistemas Distribuidos
 
 Este repositorio contiene los archivos y configuraciones utilizados para realizar pruebas de rendimiento y carga con Apache JMeter en el proyecto de Tecnologias y Sistemas Web.
