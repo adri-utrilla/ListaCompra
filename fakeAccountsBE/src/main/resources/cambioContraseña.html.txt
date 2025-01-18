@@ -1,0 +1,7 @@
+<html>
+<body>
+<p>
+Por, favor, haz clic <a href="https://localhost:4200/cambioContrasena?recToken=#TOKEN#">aquí</a> para cambiar la contraseña.
+</p>
+</body>
+</html>
